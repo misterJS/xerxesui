@@ -1,8 +1,10 @@
 {
-  "name": "xerxesui",
+  "name": "@misterJS/xerxesui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/misterJS"
+  },
   "author": "DION GANTENG",
-  "version": "beta-0.0.1",
-  "private": true,
+  "version": "0.0.1",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
