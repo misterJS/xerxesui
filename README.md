@@ -16,6 +16,7 @@ To start using XerxesUI in your React project, follow these steps:
 
     ```javascript
     import { Typography, Container } from '@misterjs/xerxesui';
+    import "@misterjs/xerxesui/dist/cjs/index.css";
     ```
 
 ## Getting Started with Create React App
