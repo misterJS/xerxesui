@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "DION GANTENG",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

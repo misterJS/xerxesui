@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { TypographyProps } from "./Typography.type";
 import { additionalWrapperStyles } from "../../global/additional";
-import TypographyStyle from "./style.module.css";
+import TypographyStyle from "./Typography.module.css";
 
 const TypographyMemo = (props: TypographyProps) => {
   const { dataTestId, type = "standard", children, fontGaye, ...rest } = props;
