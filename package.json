@@ -1,7 +1,7 @@
 {
-  "name": "@misterJS/xerxesui",
+  "name": "@misterjs/xerxesui",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/misterJS"
+    "registry": "https://registry.npmjs.org/"
   },
   "author": "DION GANTENG",
   "version": "0.0.1",
@@ -61,5 +61,16 @@
     "rollup": "^4.6.1",
     "rollup-plugin-dts": "^6.1.0",
     "terser": "^5.25.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterJS/xerxesui.git"
+  },
+  "keywords": [
+    "@misterjs/xerxesui"
+  ],
+  "bugs": {
+    "url": "https://github.com/misterJS/xerxesui/issues"
+  },
+  "homepage": "https://github.com/misterJS/xerxesui#readme"
 }

@@ -9,13 +9,13 @@ To start using XerxesUI in your React project, follow these steps:
 1. Install the package via npm:
 
     ```bash
-    npm install @misterJS/xerxesui@0.0.1
+    npm install @misterjs/xerxesui
     ```
 
 2. Import the components into your project:
 
     ```javascript
-    import { Typography, Container } from '@misterJS/xerxesui@0.0.1';
+    import { Typography, Container } from '@misterjs/xerxesui';
     ```
 
 ## Getting Started with Create React App
