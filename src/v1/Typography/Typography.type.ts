@@ -1,5 +1,5 @@
-import { Font, FontType } from "@/global/enum";
-import { AdditionalStyles } from "@/global/type";
+import { Font, FontType } from "@/global/enum.type";
+import { AdditionalStyles } from "@/global/types.type";
 
 interface ITypography {
     fontGaye?: keyof typeof Font;

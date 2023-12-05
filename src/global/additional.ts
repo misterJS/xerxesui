@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { AdditionalStyles } from "./type";
+import { AdditionalStyles } from "./types.type";
 
 export const additionalWrapperStyles = (rest: AdditionalStyles): CSSProperties => {
   const {

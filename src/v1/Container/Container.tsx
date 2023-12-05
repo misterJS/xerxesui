@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { ContainerProps } from "./ContainerType";
+import { ContainerProps } from "./Container.type";
 import ContainerStyle from "./style.module.css";
 import { additionalWrapperStyles } from "../../global/additional";
 

@@ -1,5 +1,5 @@
-import { Size } from "@/global/enum";
-import { AdditionalStyles } from "@/global/type";
+import { Size } from "@/global/enum.type";
+import { AdditionalStyles } from "@/global/types.type";
 
 interface IContainer {
     size: keyof typeof Size;
