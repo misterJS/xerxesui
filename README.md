@@ -1,5 +1,7 @@
 # Getting Started with XerxesUI
 
+![XerxesUI Logo](https://media.istockphoto.com/id/180750510/photo/persian-soldiers-from-persepolis-iran.jpg?s=612x612&w=0&k=20&c=G0VXEdsS7wHHGrxeHct2q7JTcMP__RAxs-SPvx5qDwY=)
+
 XerxesUI is a UI library created in 2023 and is currently in the early stages of development. It includes components like typography and container.
 
 ## Installation
