@@ -1,6 +1,6 @@
 # Getting Started with XerxesUI
 
-![XerxesUI Logo](https://media.istockphoto.com/id/180750510/photo/persian-soldiers-from-persepolis-iran.jpg?s=612x612&w=0&k=20&c=G0VXEdsS7wHHGrxeHct2q7JTcMP__RAxs-SPvx5qDwY=)
+![XerxesUI Logo](https://i.ibb.co/HYC0xn3/Whats-App-Image-2023-12-06-at-12-35-51-e6b08234.jpg)
 
 [![Included](https://skillicons.dev/icons?i=react,css&perline=3)](https://skillicons.dev)
 
