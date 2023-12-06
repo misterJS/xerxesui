@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "DION GANTENG",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -34,12 +34,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -58,9 +61,22 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.6.3",
+    "@storybook/addon-interactions": "^7.6.3",
+    "@storybook/addon-links": "^7.6.3",
+    "@storybook/addon-onboarding": "^1.0.9",
+    "@storybook/blocks": "^7.6.3",
+    "@storybook/preset-create-react-app": "^7.6.3",
+    "@storybook/react": "^7.6.3",
+    "@storybook/react-webpack5": "^7.6.3",
+    "@storybook/test": "^7.6.3",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prop-types": "^15.8.1",
     "rollup": "^4.6.1",
     "rollup-plugin-dts": "^6.1.0",
-    "terser": "^5.25.0"
+    "storybook": "^7.6.3",
+    "terser": "^5.25.0",
+    "webpack": "^5.89.0"
   },
   "repository": {
     "type": "git",
