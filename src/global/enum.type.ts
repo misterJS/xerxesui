@@ -5,6 +5,13 @@ export enum Size {
   superpc,
 }
 
+export enum ButtonSize {
+  small,
+  medium,
+  large,
+  custom,
+}
+
 export enum Font {
   kids,
   basic,
