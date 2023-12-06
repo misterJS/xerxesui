@@ -4,7 +4,7 @@
 
 [![Included](https://skillicons.dev/icons?i=react,css&perline=3)](https://skillicons.dev)
 
-XerxesUI is a UI library created in 2023 and is currently in the early stages of development. It includes components like typography and container.
+XerxesUI is a UI library created in 2023 by dion and is currently in the early stages of development. It includes components like typography, button and container.
 
 ## Installation
 
@@ -19,7 +19,7 @@ To start using XerxesUI in your React project, follow these steps:
 2. Import the components into your project:
 
     ```javascript
-    import { Typography, Container } from '@misterjs/xerxesui';
+    import { Typography, Container, Button } from '@misterjs/xerxesui';
     import "@misterjs/xerxesui/dist/cjs/index.css";
     ```
 
