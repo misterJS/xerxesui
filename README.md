@@ -22,6 +22,35 @@ To start using XerxesUI in your React project, follow these steps:
     import { Typography, Container, Button } from '@misterjs/xerxesui';
     import "@misterjs/xerxesui/dist/cjs/index.css";
     ```
+## Button Docs
+
+You can implement the button like this
+
+```
+    <Button title="[YOUR-TITLE]" size="small | medium | large | custom" />
+```
+
+if you need the button with icon just do this
+
+```
+    // single
+    <Button 
+        title="[YOUR-TITLE]" 
+        size="small | medium | large | custom"
+        iconLabel={<[YOUR-ICON] />}
+        iconPosition="back | front"  
+    />
+
+    // multiple
+    <Button 
+        multiIcon
+        title="[YOUR-TITLE]" 
+        size="small | medium | large | custom"
+        iconLabel={[<[YOUR-ICON1-back] />, <[YOUR-ICON2-front] />]}
+    />
+```
+
+![Alt text](/public/how-to-use-button.png)
 
 ## Wanna be contributor?
 
