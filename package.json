@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "misterJs",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -38,7 +38,7 @@
     "rollup": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "postinstall": "node ./scripts/setup.js"
+    "postinstall": "node scripts/setup.js"
   },
   "eslintConfig": {
     "extends": [
