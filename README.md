@@ -32,6 +32,12 @@ You can implement the button like this
 
 if you need the button with icon just do this
 
+install the free icon like this
+
+```
+    npm i @irsyadadl/paranoid 
+```
+
 ```
     // single
     <Button 
