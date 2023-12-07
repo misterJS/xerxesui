@@ -4365,15 +4365,28 @@ var ButtonMemo = function (props) {
         _a[ButtonStyle.large] = size === "large",
         _a));
     var renderIconLabel = function () {
-        if (iconLabel && !multiIcon) {
-            return jsxRuntimeExports.jsx("span", { children: iconLabel });
-        }
-        else if (iconLabel && multiIcon && Array.isArray(iconLabel)) {
-            return (jsxRuntimeExports.jsxs(React.Fragment, { children: [jsxRuntimeExports.jsx("span", { children: iconLabel[0] }), jsxRuntimeExports.jsx("span", { children: iconLabel[1] })] }));
+        if (iconLabel) {
+            if (Array.isArray(iconLabel)) {
+                return (jsxRuntimeExports.jsx(React.Fragment, { children: iconLabel.map(function (icon, index) { return (jsxRuntimeExports.jsx("span", { children: icon }, "icon-".concat(index))); }) }));
+            }
+            else {
+                return jsxRuntimeExports.jsx("span", { children: iconLabel });
+            }
         }
         return null;
     };
-    return (jsxRuntimeExports.jsx("div", __assign({ className: ButtonStyle.buttonWrapper }, { children: jsxRuntimeExports.jsxs("button", __assign({ className: "".concat(ButtonStyle.button, " ").concat(sizeClassName), style: size === "custom" ? additionalWrapperStyles(rest) : {} }, props, { children: [iconPosition === "back" && renderIconLabel(), jsxRuntimeExports.jsx("span", { children: title }), iconPosition === "front" && renderIconLabel()] })) })));
+    var renderButtonContent = function () {
+        if (multiIcon) {
+            return (jsxRuntimeExports.jsxs(React.Fragment, { children: [renderIconLabel(), jsxRuntimeExports.jsx("span", { children: title }), renderIconLabel()] }));
+        }
+        else if (iconPosition === "back" || iconPosition === "front") {
+            return (jsxRuntimeExports.jsxs(React.Fragment, { children: [iconPosition === "back" && renderIconLabel(), jsxRuntimeExports.jsx("span", { children: title }), iconPosition === "front" && renderIconLabel()] }));
+        }
+        else {
+            return (jsxRuntimeExports.jsx(React.Fragment, { children: jsxRuntimeExports.jsx("span", { children: title }) }));
+        }
+    };
+    return (jsxRuntimeExports.jsx("div", __assign({ className: ButtonStyle.buttonWrapper }, { children: jsxRuntimeExports.jsx("button", __assign({ className: "".concat(ButtonStyle.button, " ").concat(sizeClassName), style: size === "custom" ? additionalWrapperStyles(rest) : {} }, rest, { children: renderButtonContent() })) })));
 };
 var Button = reactExports.memo(ButtonMemo);
 

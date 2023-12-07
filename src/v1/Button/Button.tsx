@@ -13,17 +13,46 @@ const ButtonMemo = (props: ButtonProps) => {
   });
 
   const renderIconLabel = () => {
-    if (iconLabel && !multiIcon) {
-      return <span>{iconLabel}</span>;
-    } else if (iconLabel && multiIcon && Array.isArray(iconLabel)) {
+    if (iconLabel) {
+      if (Array.isArray(iconLabel)) {
+        return (
+          <React.Fragment>
+            {iconLabel.map((icon, index) => (
+              <span key={`icon-${index}`}>{icon}</span>
+            ))}
+          </React.Fragment>
+        );
+      } else {
+        return <span>{iconLabel}</span>;
+      }
+    }
+    return null;
+  };
+
+  const renderButtonContent = () => {
+    if (multiIcon) {
       return (
         <React.Fragment>
-          <span>{iconLabel[0]}</span>
-          <span>{iconLabel[1]}</span>
+          {renderIconLabel()}
+          <span>{title}</span>
+          {renderIconLabel()}
+        </React.Fragment>
+      );
+    } else if (iconPosition === "back" || iconPosition === "front") {
+      return (
+        <React.Fragment>
+          {iconPosition === "back" && renderIconLabel()}
+          <span>{title}</span>
+          {iconPosition === "front" && renderIconLabel()}
+        </React.Fragment>
+      );
+    } else {
+      return (
+        <React.Fragment>
+          <span>{title}</span>
         </React.Fragment>
       );
     }
-    return null;
   };
 
   return (
@@ -31,11 +60,9 @@ const ButtonMemo = (props: ButtonProps) => {
       <button
         className={`${ButtonStyle.button} ${sizeClassName}`}
         style={size === "custom" ? additionalWrapperStyles(rest) : {}}
-        {...props}
+        {...rest}
       >
-        {iconPosition === "back" && renderIconLabel()}
-        <span>{title}</span>
-        {iconPosition === "front" && renderIconLabel()}
+        {renderButtonContent()}
       </button>
     </div>
   );
