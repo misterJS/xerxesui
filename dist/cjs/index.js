@@ -45,6 +45,10 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
+function getDefaultExportFromCjs (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
+
 var jsxRuntime = {exports: {}};
 
 var reactJsxRuntime_development = {};
@@ -2844,6 +2848,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 var reactExports = react.exports;
+var React = /*@__PURE__*/getDefaultExportFromCjs(reactExports);
 
 /**
  * @license React
@@ -4259,23 +4264,77 @@ var additionalWrapperStyles = function (rest) {
     };
 };
 
+var classnames = {exports: {}};
+
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+(function (module) {
+	/* global define */
+
+	(function () {
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames() {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg;
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					if (arg.length) {
+						var inner = classNames.apply(null, arg);
+						if (inner) {
+							classes.push(inner);
+						}
+					}
+				} else if (argType === 'object') {
+					if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+						classes.push(arg.toString());
+						continue;
+					}
+
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (module.exports) {
+			classNames.default = classNames;
+			module.exports = classNames;
+		} else {
+			window.classNames = classNames;
+		}
+	}()); 
+} (classnames));
+
+var classnamesExports = classnames.exports;
+var classNames = /*@__PURE__*/getDefaultExportFromCjs(classnamesExports);
+
 var ContainerMemo = function (props) {
+    var _a;
     var dataTestId = props.dataTestId, size = props.size, children = props.children, rest = __rest(props, ["dataTestId", "size", "children"]);
-    var sizeClassName = "";
-    switch (size) {
-        case "mobile":
-            sizeClassName = ContainerStyle.mobile;
-            break;
-        case "tablet":
-            sizeClassName = ContainerStyle.tablet;
-            break;
-        case "pc":
-            sizeClassName = ContainerStyle.pc;
-            break;
-        default:
-            sizeClassName = ContainerStyle.superpc;
-            break;
-    }
+    var sizeClassName = classNames((_a = {},
+        _a[ContainerStyle.mobile] = size === "mobile",
+        _a[ContainerStyle.tablet] = size === "tablet",
+        _a[ContainerStyle.pc] = size === "pc",
+        _a[ContainerStyle.superpc] = size === undefined || null,
+        _a));
     return (jsxRuntimeExports.jsx("div", __assign({ className: ContainerStyle.container }, { children: jsxRuntimeExports.jsx("div", __assign({ "data-testid": dataTestId, className: sizeClassName, style: additionalWrapperStyles(rest) }, { children: children })) })));
 };
 var Container = reactExports.memo(ContainerMemo);
@@ -4283,26 +4342,48 @@ var Container = reactExports.memo(ContainerMemo);
 var TypographyStyle = {"kids":"Typography-module_kids__oGhVY","aesthetic":"Typography-module_aesthetic__PJsBJ","retro":"Typography-module_retro__yt4aS","basic":"Typography-module_basic__WW1V6"};
 
 var TypographyMemo = function (props) {
-    var dataTestId = props.dataTestId, _a = props.type, type = _a === void 0 ? "standard" : _a, children = props.children, fontGaye = props.fontGaye, rest = __rest(props, ["dataTestId", "type", "children", "fontGaye"]);
-    var fontClassName = "";
-    switch (fontGaye) {
-        case "kids":
-            fontClassName = TypographyStyle.kids;
-            break;
-        case "aesthetic":
-            fontClassName = TypographyStyle.aesthetic;
-            break;
-        case "retro":
-            fontClassName = TypographyStyle.retro;
-            break;
-        default:
-            fontClassName = TypographyStyle.basic;
-            break;
-    }
+    var _a;
+    var dataTestId = props.dataTestId, _b = props.type, type = _b === void 0 ? "standard" : _b, children = props.children, fontOption = props.fontOption, rest = __rest(props, ["dataTestId", "type", "children", "fontOption"]);
+    var fontClassName = classNames((_a = {},
+        _a[TypographyStyle.kids] = fontOption === "kids",
+        _a[TypographyStyle.aesthetic] = fontOption === "aesthetic",
+        _a[TypographyStyle.retro] = fontOption === "retro",
+        _a[TypographyStyle.basic] = fontOption === "basic" || fontOption === undefined,
+        _a));
     return (jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [type === "standard" && (jsxRuntimeExports.jsx("p", __assign({ "data-testid": dataTestId, className: fontClassName, style: additionalWrapperStyles(rest) }, { children: children }))), type === "h1" && (jsxRuntimeExports.jsx("h1", __assign({ "data-testid": dataTestId, className: fontClassName, style: additionalWrapperStyles(rest) }, { children: children }))), type === "h2" && (jsxRuntimeExports.jsx("h2", __assign({ "data-testid": dataTestId, className: fontClassName, style: additionalWrapperStyles(rest) }, { children: children }))), type === "h3" && (jsxRuntimeExports.jsx("h3", __assign({ "data-testid": dataTestId, className: fontClassName, style: additionalWrapperStyles(rest) }, { children: children })))] }));
 };
 var Typography = reactExports.memo(TypographyMemo);
 
+var ButtonStyle = {"buttonWrapper":"Button-module_buttonWrapper__POQ4B","button":"Button-module_button__oc09p","small":"Button-module_small__88D1p","medium":"Button-module_medium__BeOdX","large":"Button-module_large__kzs5U"};
+
+var ButtonMemo = function (props) {
+    var _a;
+    var size = props.size, title = props.title, iconLabel = props.iconLabel, iconPosition = props.iconPosition, multiIcon = props.multiIcon, rest = __rest(props, ["size", "title", "iconLabel", "iconPosition", "multiIcon"]);
+    var sizeClassName = classNames((_a = {},
+        _a[ButtonStyle.small] = size === "small",
+        _a[ButtonStyle.medium] = size === "medium",
+        _a[ButtonStyle.large] = size === "large",
+        _a));
+    var renderIconLabel = function () {
+        if (iconLabel && !multiIcon) {
+            return jsxRuntimeExports.jsx("span", { children: iconLabel });
+        }
+        else if (iconLabel && multiIcon && Array.isArray(iconLabel)) {
+            return (jsxRuntimeExports.jsxs(React.Fragment, { children: [jsxRuntimeExports.jsx("span", { children: iconLabel[0] }), jsxRuntimeExports.jsx("span", { children: iconLabel[1] })] }));
+        }
+        return null;
+    };
+    return (jsxRuntimeExports.jsx("div", __assign({ className: ButtonStyle.buttonWrapper }, { children: jsxRuntimeExports.jsxs("button", __assign({ className: "".concat(ButtonStyle.button, " ").concat(sizeClassName), style: size === "custom" ? additionalWrapperStyles(rest) : {} }, props, { children: [iconPosition === "back" && renderIconLabel(), jsxRuntimeExports.jsx("span", { children: title }), iconPosition === "front" && renderIconLabel()] })) })));
+};
+var Button = reactExports.memo(ButtonMemo);
+
+var position;
+(function (position) {
+    position[position["front"] = 0] = "front";
+    position[position["back"] = 1] = "back";
+})(position || (position = {}));
+
+exports.Button = Button;
 exports.Container = Container;
 exports.Typography = Typography;
 //# sourceMappingURL=index.js.map

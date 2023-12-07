@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.cdnfonts.com/css/retro-cool');
+@import url('https://fonts.cdnfonts.com/css/aesthetic');
+
+.kids {
+    font-family: 'Bubblegum Sans', sans-serif;
+}
+
+.aesthetic {
+    font-family: 'Aesthetic', sans-serif;
+                                                
+}
+
+.retro {
+    font-family: 'Retro Cool', sans-serif;
+}
+
+.basic {
+    font-family: Verdana, sans-serif;
+}

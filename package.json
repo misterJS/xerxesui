@@ -3,8 +3,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "author": "DION GANTENG",
-  "version": "0.0.4",
+  "author": "misterJs",
+  "version": "0.0.12",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,7 +12,7 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "description": "A simple template for a custom React component library",
+  "description": "A simple template for a custom React or Next component library",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -21,6 +21,7 @@
     "@types/node": "^16.18.67",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
+    "classnames": "^2.3.2",
     "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

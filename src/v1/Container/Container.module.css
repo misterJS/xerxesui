@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.mobile {
+    min-width: 320px;
+    max-width: 444px;
+}
+
+.tablet {
+    min-width: 444px;
+    max-width: 720px;
+}
+
+.pc {
+    min-width: 720px;
+    max-width: 960px;
+}
+
+.superpc {
+    min-width: 960px;
+    max-width: 100%;
+}
