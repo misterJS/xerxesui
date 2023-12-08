@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "misterJs",
-  "version": "0.0.17",
+  "version": "0.0.23",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -37,8 +37,7 @@
     "eject": "react-scripts eject",
     "rollup": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "postinstall": "node setup.js"
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
@@ -72,9 +71,7 @@
     "@storybook/react": "^7.6.3",
     "@storybook/react-webpack5": "^7.6.3",
     "@storybook/test": "^7.6.3",
-    "@types/inquirer": "^9.0.7",
     "eslint-plugin-storybook": "^0.6.15",
-    "inquirer": "^9.2.12",
     "prop-types": "^15.8.1",
     "rollup": "^4.6.1",
     "rollup-plugin-dts": "^6.1.0",
@@ -87,7 +84,10 @@
     "url": "git+https://github.com/misterJS/xerxesui.git"
   },
   "keywords": [
-    "@misterjs/xerxesui"
+    "@misterjs/xerxesui",
+    "xerxes-ui",
+    "Collaborate with @irsyadadl/paranoid",
+    "UI with AI integrated"
   ],
   "bugs": {
     "url": "https://github.com/misterJS/xerxesui/issues"
