@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "misterJs",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
