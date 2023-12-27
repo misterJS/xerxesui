@@ -1,18 +1,6 @@
 import { ButtonSize } from "@/global/enum.type";
 import { AdditionalStyles } from "@/global/types.type";
 
-type ExcludeButtonProps =
-  | "className"
-  | "form"
-  | "contentEditable"
-  | "style"
-  | "translate"
-  | "role"
-  | "prefix"
-  | "type"
-  | "onclick"
-  | "inputMode";
-
 enum position {
   front,
   back,
@@ -23,6 +11,7 @@ interface IButtonBase
     AdditionalStyles {
   size: keyof typeof ButtonSize;
   title: string;
+  hoverAnimate?: boolean;
   dataTestId?: string;
 }
 

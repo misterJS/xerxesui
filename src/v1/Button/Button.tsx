@@ -5,7 +5,20 @@ import { ButtonProps } from "./Button.type";
 import classNames from "classnames";
 
 const ButtonMemo = (props: ButtonProps) => {
-  const { size, title, iconLabel, iconPosition, multiIcon, ...rest } = props;
+  const {
+    size,
+    title,
+    iconLabel,
+    iconPosition,
+    multiIcon,
+    hoverAnimate = true,
+    ...rest
+  } = props;
+
+  const hoverClassName = classNames({
+    [ButtonStyle.hoverAnimate]: hoverAnimate,
+  })
+
   const sizeClassName = classNames({
     [ButtonStyle.small]: size === "small",
     [ButtonStyle.medium]: size === "medium",
@@ -58,7 +71,7 @@ const ButtonMemo = (props: ButtonProps) => {
   return (
     <div className={ButtonStyle.buttonWrapper}>
       <button
-        className={`${ButtonStyle.button} ${sizeClassName}`}
+        className={`${ButtonStyle.button} ${sizeClassName} ${hoverClassName}`}
         style={size === "custom" ? additionalWrapperStyles(rest) : {}}
         {...rest}
       >

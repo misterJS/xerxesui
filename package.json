@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "author": "misterJs",
-  "version": "0.0.23",
+  "version": "0.0.25",
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -85,9 +85,7 @@
   },
   "keywords": [
     "@misterjs/xerxesui",
-    "xerxes-ui",
-    "Collaborate with @irsyadadl/paranoid",
-    "UI with AI integrated"
+    "xerxes-ui"
   ],
   "bugs": {
     "url": "https://github.com/misterJS/xerxesui/issues"
